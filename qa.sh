@@ -18,17 +18,11 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
-# Install Cask
-# brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
-
-# Already installed in brew.sh
-brew cask install --appdir="~/Applications" java
-# brew cask install --appdir="~/Applications" Caskroom/versions/intellij-idea-ce
-brew cask install --appdir="~/Applications" android-studio
-
-# Not working, better let Android Studio install it
-# brew install android-sdk
+brew install node
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Install iso-deploy to enable app installation in iOS devices
+npm install -g ios-deploy
+
