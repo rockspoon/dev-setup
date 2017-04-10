@@ -23,6 +23,9 @@ brew install node
 # Remove outdated versions from the cellar.
 brew cleanup
 
-# Install iso-deploy to enable app installation in iOS devices
+# Install ios-deploy to enable app installation in iOS devices
 npm install -g ios-deploy
 
+# Install appium
+npm install -g appium
+npm install wd
