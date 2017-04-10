@@ -24,7 +24,6 @@ brew tap caskroom/versions
 
 # Already installed in brew.sh
 brew cask install --appdir="~/Applications" java
-brew cask install --appdir="/Applications" virtualbox
 # brew cask install --appdir="~/Applications" Caskroom/versions/intellij-idea-ce
 brew cask install --appdir="~/Applications" android-studio
 
