@@ -12,27 +12,34 @@ dev-setup
 ```
 4. Create/Update `.bash_profile` and add `source .extra`
 	> If you don't have a `.bash_profile` file, you can use `echo "souch .extra" >> ~/.bash_profile`
-5. Reboot your machine
-6. Open Android Studio and install Android SDK
-7. Add `JAVA_HOME` to your `.extra` or `.bash_profile`
+5. Install ruby and bundler
+```
+RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)" rbenv install __VERSION__
+rbenv global __VERSION__
+ruby install bundler
+```
+   
+6. Reboot your machine
+7. Open Android Studio and install Android SDK
+8. Add `JAVA_HOME` to your `.extra` or `.bash_profile`
 ```
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk__VERSION__.jdk/Contents/Home
 export PATH="$JAVA_HOME/bin:$PATH"
 ```
-8. Add `ANDROD_HOME` to your `.extra` or `.bash_profile`
+9. Add `ANDROD_HOME` to your `.extra` or `.bash_profile`
 ```
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/lib:$ANDROID_HOME/tools/lib
 ```
-9. You can add some alias to ease your life
+10. You can add some alias to ease your life
 ```
 alias be="bundle exec "
 alias bi="bundle install"
 ```
-10. Install iOS provisioning profiles
+11. Install iOS provisioning profiles
 
-============
-============
+
+--------------------------
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/repo-header.gif">
