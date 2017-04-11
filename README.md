@@ -29,9 +29,10 @@ export PATH=$PATH:$ANDROID_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-t
 alias be="bundle exec "
 alias bi="bundle install"
 ```
+10. Install iOS provisioning profiles
 
-
-
+============
+============
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/repo-header.gif">
