@@ -11,12 +11,12 @@ dev-setup
 ./.dots all
 ```
 4. Create/Update `.bash_profile` and add `source .extra`
-	> If you don't have a `.bash_profile` file, you can use `echo "souch .extra" >> ~/.bash_profile`
+	> If you don't have a `.bash_profile` file, you can use `echo "source .extra" >> ~/.bash_profile`
 5. Install ruby and bundler
 ```
 RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)" rbenv install __VERSION__
 rbenv global __VERSION__
-ruby install bundler
+gem install bundler
 ```
    
 6. Reboot your machine
