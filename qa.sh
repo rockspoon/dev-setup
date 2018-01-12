@@ -29,3 +29,6 @@ npm install -g ios-deploy
 # Install appium
 npm install -g appium
 npm install wd
+
+# Install Emacs
+brew cask install emacs
