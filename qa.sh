@@ -20,17 +20,17 @@ brew update
 
 brew install node
 
-# Remove outdated versions from the cellar.
-brew cleanup
-
-# Install Appium
-npm install -g appium
-npm install wd
+# Install Emacs
+brew cask install emacs
 
 # Install Appium iOS Dependencies
 brew install carthage
 brew install libimobiledevice --HEAD
 brew install ios-deploy
 
-# Install Emacs
-brew cask install emacs
+# Remove outdated versions from the cellar.
+brew cleanup
+
+# Install Appium
+npm install -g appium
+npm install wd
