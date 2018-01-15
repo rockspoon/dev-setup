@@ -23,12 +23,14 @@ brew install node
 # Remove outdated versions from the cellar.
 brew cleanup
 
-# Install ios-deploy to enable app installation in iOS devices
-npm install -g ios-deploy
-
-# Install appium
+# Install Appium
 npm install -g appium
 npm install wd
+
+# Install Appium iOS Dependencies
+brew install carthage
+brew install libimobiledevice --HEAD
+brew install ios-deploy
 
 # Install Emacs
 brew cask install emacs
