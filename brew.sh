@@ -39,7 +39,6 @@ brew install gnu-sed --with-default-names
 # Install Bash 4.
 brew install bash
 brew tap homebrew/versions
-brew install bash-completion2
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
 # Prompts for password
@@ -65,6 +64,28 @@ brew install ruby-build
 brew install rbenv
 LINE='eval "$(rbenv init -)"'
 grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+
+# Install bash plugins
+brew install bash-git-prompt
+LINE=$(cat <<- EOM
+if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+   GIT_PROMPT_THEME=Default
+   source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+fi
+
+EOM
+)
+echo "$LINE" >> ~/.extra
+
+brew install bash-completion
+LINE=$(cat <<- EOM
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
+EOM
+)
+echo "$LINE" >> ~/.extra
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
@@ -132,15 +153,6 @@ brew install tree
 # brew install zopfli
 # brew install pkg-config libffi
 # brew install pandoc
-brew install bash-git-prompt
-LINE=$(cat <<- EOM
-if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
-   GIT_PROMPT_THEME=Default
-   source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
-fi
-EOM
-)
-echo "$LINE" >> ~/.extra
 
 # Lxml and Libxslt
 brew install libxml2
