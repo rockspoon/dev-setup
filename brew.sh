@@ -185,6 +185,7 @@ brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" whatsapp
 brew cask install --appdir="/Applications" dropbox
+brew cask install --appdir="/Applications" google-backup-and-sync
 # brew cask install --appdir="/Applications" evernote
 # brew cask install --appdir="/Applications" 1password
 # brew cask install --appdir="/Applications" gimp
