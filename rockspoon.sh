@@ -19,10 +19,8 @@ fi
 brew update
 
 # Install Cask
-# brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
-# Already installed in brew.sh
 brew cask install --appdir="~/Applications" intellij-idea
 brew cask install --appdir="~/Applications" datagrip
 brew cask install --appdir="~/Applications" postgres
@@ -31,6 +29,9 @@ brew cask install --appdir="~/Applications" cleanmymac
 brew cask install --appdir="~/Applications" charles
 brew cask install --appdir="~/Applications" paw
 brew cask install --appdir="~/Applications" zeplin
+
+
+brew install maven
 
 
 brew cask install --appdir="~/Applications" calibre
