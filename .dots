@@ -48,6 +48,14 @@ function runDots() {
             echo ""
             ./qa.sh
         fi
+	if [ $ARG == "rockspoon" ] || [ $ARG == "all" ]; then
+            # Run the rockspoon.sh Script
+            echo "------------------------------"
+            echo "Setting up Rockspoon development environment."
+            echo "------------------------------"
+            echo ""
+            ./rockspoon.sh
+        fi
     done
 
     echo "------------------------------"
