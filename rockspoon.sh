@@ -33,6 +33,6 @@ brew cask install --appdir="~/Applications" zeplin
 
 brew install maven
 brew install postgres
-
+brew install jmeter
 
 brew cask install --appdir="~/Applications" calibre
