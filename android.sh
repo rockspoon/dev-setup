@@ -23,8 +23,27 @@ brew update
 brew tap caskroom/versions
 
 # Already installed in brew.sh
+# Installing JAVA 8
 brew cask install --appdir="~/Applications" java8
+# Adding JAVA_HOME to .extra file
+LINE='export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"'
+grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+
+LINE='export PATH="$JAVA_HOME/bin:$PATH"'
+grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+
+
+# Installing ANDROID STUDIO
 brew cask install --appdir="~/Applications" android-studio
+
+# Setting ANDROID_HOME on the .extra file. Maybe will
+# need some update if SDK was installed without using Android Studio
+LINE='export ANDROID_HOME=~/Library/Android/sdk'
+grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+
+LINE='PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools'
+grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+
 
 # Not working, better let Android Studio install it
 # brew install android-sdk

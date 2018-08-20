@@ -165,9 +165,15 @@ brew link libxslt --force
 # heroku update
 
 # Core casks
-# brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" java8
+# Adding JAVA_HOME to .extra file
+LINE='export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"'
+grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+
+LINE='export PATH="$JAVA_HOME/bin:$PATH"'
+grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+
 # brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
@@ -200,7 +206,6 @@ brew install maven
 
 # Install Docker, which requires virtualbox
 brew install docker
-# brew install boot2docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
