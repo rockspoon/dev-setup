@@ -167,7 +167,7 @@ brew link libxslt --force
 # Core casks
 # brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
+brew cask install --appdir="~/Applications" java8
 # brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
@@ -179,8 +179,8 @@ brew cask install --appdir="/Applications" spotify
 # brew cask install --appdir="/Applications" macdown
 
 # Misc casks
-# brew cask install --appdir="/Applications" google-chrome
-# brew cask install --appdir="/Applications" firefox
+brew cask install --appdir="/Applications" google-chrome
+brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" whatsapp
@@ -194,11 +194,12 @@ brew cask install --appdir="/Applications" google-backup-and-sync
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
 
-# Link cask apps to Alfred
-# brew cask alfred link
+brew cask install postgres
+brew install maven
+
 
 # Install Docker, which requires virtualbox
-# brew install docker
+brew install docker
 # brew install boot2docker
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
