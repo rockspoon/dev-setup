@@ -202,7 +202,7 @@ brew cask install --appdir="/Applications" google-backup-and-sync
 
 brew cask install postgres
 brew install maven
-
+brew install kubernetes-cli
 
 # Install Docker, which requires virtualbox
 brew install docker
