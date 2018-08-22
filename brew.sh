@@ -206,6 +206,7 @@ brew install kubernetes-cli
 
 # Install Docker, which requires virtualbox
 brew install docker
+brew cask install minikube
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
