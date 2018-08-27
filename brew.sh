@@ -38,7 +38,6 @@ brew install findutils
 brew install gnu-sed --with-default-names
 # Install Bash 4.
 brew install bash
-brew tap homebrew/versions
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
 # Prompts for password
@@ -89,9 +88,8 @@ echo "$LINE" >> ~/.extra
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+brew install grep
+brew install openssh
 # brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
@@ -192,6 +190,7 @@ brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" whatsapp
 brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" google-backup-and-sync
+brew cask install  --appdir="/Applications" lastpass
 # brew cask install --appdir="/Applications" evernote
 # brew cask install --appdir="/Applications" 1password
 # brew cask install --appdir="/Applications" gimp
@@ -202,11 +201,7 @@ brew cask install --appdir="/Applications" google-backup-and-sync
 
 brew cask install postgres
 brew install maven
-brew install kubernetes-cli
 
-# Install Docker, which requires virtualbox
-brew install docker
-brew cask install minikube
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
