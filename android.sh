@@ -38,12 +38,11 @@ brew cask install --appdir="~/Applications" android-studio
 
 # Setting ANDROID_HOME on the .extra file. Maybe will
 # need some update if SDK was installed without using Android Studio
-LINE='export ANDROID_HOME=~/Library/Android/sdk'
+LINE='export ANDROID_HOME="$HOME/Library/Android/sdk"'
 grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
 LINE='PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools'
 grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
-
 
 # Not working, better let Android Studio install it
 # brew install android-sdk
