@@ -32,6 +32,8 @@ brew cask install google-cloud-sdk
 # Install Docker, which requires virtualbox
 brew install docker
 brew cask install minikube
+# Installing aws client
+pip3 install awscli --upgrade --user
 
 
 
