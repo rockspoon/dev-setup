@@ -165,6 +165,7 @@ brew link libxslt --force
 # Core casks
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" java8
+brew install angular-cli
 # Adding JAVA_HOME to .extra file
 LINE='export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"'
 grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
