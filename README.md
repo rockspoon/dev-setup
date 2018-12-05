@@ -4,14 +4,22 @@ dev-setup
 
 ## Utilization
 
-1. Download and install Xcode
+1. Go to the AppStore and Download and install Xcode
 2. Open Xcode and accept its terms
-3. Run script
+3. Clone this repository using the Terminal:
 ```
+ git clone https://github.com/RockSpoon/dev-setup.git
+
+```
+and then run:
+```
+cd dev-setup/ 
+ls
+sudo chmod -R $(whoami) /usr/local/Homebrew 
 ./.dots all
 ```
-4. Create/Update `.bash_profile` and add `source .extra`
-	> If you don't have a `.bash_profile` file, you can use `echo "source .extra" >> ~/.bash_profile`
+4. Create/Update `~/.bash_profile` and add `source ~/.extra`
+	> If you don't have a `.bash_profile` file, you can use `echo "source ~/.extra" >> ~/.bash_profile`
 5. Install ruby and bundler
 ```
 RUBY_CONFIGURE_OPTS=--with-readline-dir="$(brew --prefix readline)" rbenv install __VERSION__
