@@ -13,6 +13,7 @@ dev-setup
 ```
 and then run:
 ```
+cd dev-setup/
 ./.dots all
 ```
 4. Create/Update `~/.bash_profile` and add `source ~/.extra`
