@@ -13,9 +13,6 @@ dev-setup
 ```
 and then run:
 ```
-cd dev-setup/ 
-ls
-sudo chmod -R $(whoami) /usr/local/Homebrew 
 ./.dots all
 ```
 4. Create/Update `~/.bash_profile` and add `source ~/.extra`
